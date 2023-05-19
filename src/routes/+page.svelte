@@ -1,2 +1,15 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+    import { typewriter } from '$lib/typewriter';
+    import { onMount } from 'svelte';
+
+    let ready = false;
+    onMount(() => {
+        ready = true;
+    });
+
+</script>
+
+<h1>Ashton Sobeck</h1>
+{#if ready}
+    <p transition:typewriter|local>Software Engineer</p>
+{/if }
