@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Badge, Card, Group, Text } from '@svelteuidev/core';
+	import { Badge, Card, Center, Group, Text } from '@svelteuidev/core';
 	import type { Job } from '$lib/types';
 	export let job: Job;
 
@@ -9,8 +9,8 @@
 	console.log('in job');
 </script>
 
-<Card shadow="xl" padding="lg" override={CardWidth}>
-	<Card.Section first padding="lg">
+<Card shadow="sm" padding="lg" override={CardWidth}>
+	<Card.Section first padding="md">
 		<Group position="apart" mr="sm" ml="sm">
 			<Text>hallo</Text>
 			<Badge>
@@ -26,7 +26,9 @@
 			{job.name}
 		</Text>
 	</Group>
-	<Badge>
-		{job.tech}
-	</Badge>
+	<Center>
+		<Badge title={job.tech}>
+			{job.tech}
+		</Badge>
+	</Center>
 </Card>

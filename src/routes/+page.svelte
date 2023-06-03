@@ -2,7 +2,7 @@
 	import { typewriter } from '$lib/typewriter';
 	import { onMount } from 'svelte';
 	import Experience from './Experience.svelte';
-	import { Center, Container } from '@svelteuidev/core';
+	import { Center, Container, Title } from '@svelteuidev/core';
 
 	let ready = false;
 	onMount(() => {
@@ -12,7 +12,7 @@
 
 <Container>
 	<Center>
-		<h1>Ashton Sobeck</h1>
+		<Title order={1}>Ashton Sobeck</Title>
 	</Center>
 	{#if ready}
 		<Center>

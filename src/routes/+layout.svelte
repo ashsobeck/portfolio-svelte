@@ -1,4 +1,5 @@
 <script>
+	import '../app.css';
 	import { SvelteUIProvider } from '@svelteuidev/core';
 </script>
 
